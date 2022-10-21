@@ -25,7 +25,6 @@ def hmac(message: str, key: str, source: str, block_len: int):
 
     # zero padding to length = block_length (64 in our case)
     zero_padded_key = key.ljust(block_len, '0')
-    print(zero_padded_key)
 
     # translating with ipad and opad sequence
     ipad = zero_padded_key.translate(opad_translator)
