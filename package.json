@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "python -m uvicorn index:app --reload",
+    "start": "python3 -m uvicorn index:app --reload",
     "client": "python3 client.py"
   },
   "author": "",
