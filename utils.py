@@ -42,11 +42,14 @@ def hmac(message: str, key: str, source: str, block_len: int):
     opad = sxor(ot, zero_padded_key)
 
     # concatenating the message with ipad and source
+    message = message.rjust(block_len, '0')
+    source = source.rjust(block_len, '0')
     message1 = ipad + message + source
     hash1 = custom_hash(message=message1)
     print(f'Intermediate digest: {hash1}')
 
     # concatenating message with opad and intermediate digest
+    hash1 = hash1.rjust(block_len, '0')
     message2 = opad + hash1
     hash2 = custom_hash(message=message2)
 
