@@ -14,16 +14,6 @@ def hello_world():
     return {'status': 200, 'message': 'Hello world'}
 
 
-@app.post('/get-digest')
-def get_digest(obj: HMACObject):
-    '''
-        API to get digest
-        request -> source: string, key: string, message: string
-        response -> digest: string
-    '''
-    return {'digest': hmac(obj.message, obj.key, obj.source, block_len)}
-
-
 @app.post('/verify-digest')
 def verify_digest(obj: HMACObject):
     '''
