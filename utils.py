@@ -13,6 +13,11 @@ def custom_hash(message: str):
 
 
 def sxor(s1: str, s2: str):
+    '''
+        Function that computes the XOR of two strings
+        input -> s1: str, s2: str
+        returns -> xor of s1 and s2: str
+    '''
     return ''.join(chr(ord(a) ^ ord(b)) for a, b in zip(s1, s2))
 
 
