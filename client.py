@@ -7,7 +7,7 @@ from constants import BASE_URL
 obj = {
     'key': 'k1h23b2e21jeg1j2fej12he',
     'source': 'vaasugambhir',
-    'message': 'My PS4 will be burried with me',
+    'message': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     'digest': ''
 }
 res = requests.post(f'{BASE_URL}/get-digest', json=obj)
